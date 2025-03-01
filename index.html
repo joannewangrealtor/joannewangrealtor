@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtor Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('path/to/background-photo.jpg'); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+        .header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .header img.logo {
+            max-width: 100px;
+            margin-left: 20px;
+        }
+        .header-content {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .lang-toggle {
+            margin: 10px 20px 10px 0;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .about-me {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(249, 249, 249, 0.9);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .about-me img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .lang-section {
+            display: none;
+        }
+        .lang-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo on Left -->
+    <div class="header">
+        <img src="path/to/company-logo.png" alt="Company Logo" class="logo"> <!-- Replace with your logo path -->
+        <div class="header-content">
+            <h1 id="header-title">Realtor Name</h1>
+            <div class="lang-toggle">
+                <button onclick="switchLang('en')">English</button>
+                <button onclick="switchLang('zh')">中文</button>
+                <button onclick="switchLang('ja')">日本語</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Content Sections -->
+    <div class="content">
+        <!-- English -->
+        <div id="intro-en" class="lang-section active">
+            <h2>Welcome to Your Real Estate Solution</h2>
+            <p>Find your dream home with us! We specialize in residential and commercial properties.</p>
+        </div>
+        <!-- Chinese -->
+        <div id="intro-zh" class="lang-section">
+            <h2>欢迎体验您的房地产解决方案</h2>
+            <p>与我们一起找到您的梦想家园！我们专注于住宅和商业地产。</p>
+        </div>
+        <!-- Japanese -->
+        <div id="intro-ja" class="lang-section">
+            <h2>あなたの不動産ソリューションへようこそ</h2>
+            <p>私たちと一緒に夢の住まいを見つけましょう！住宅および商業物件を専門としています。</p>
+        </div>
+    </div>
+
+    <!-- About Me Section with Portrait -->
+    <div class="about-me">
+        <!-- English -->
+        <div id="about-en" class="lang-section active">
+            <h2>About Me</h2>
+            <img src="path/to/your-photo.jpg" alt="Realtor Name"> <!-- Your portrait -->
+            <p>Hello! I’m [Realtor Name], a dedicated real estate professional with over 10 years of experience helping clients buy and sell properties. My goal is to make your real estate journey smooth and successful.</p>
+        </div>
+        <!-- Chinese -->
+        <div id="about-zh" class="lang-section">
+            <h2>关于我</h2>
+            <img src="path/to/your-photo.jpg" alt="房地产经纪人姓名">
+            <p>您好！我是[房地产经纪人姓名]，一位擁有超过10年经验的房地产专业人士，致力于帮助客户买卖房产。我的目标是让您的房地产之旅顺利而成功。</p>
+        </div>
+        <!-- Japanese -->
+        <div id="about-ja" class="lang-section">
+            <h2>私について</h2>
+            <img src="path/to/your-photo.jpg" alt="不動産業者名">
+            <p>こんにちは！私は[不動産業者名]、10年以上の経験を持つ不動産専門家です。お客様が物件を売買するお手伝いをし、スムーズで成功的な不動産体験を提供することが私の目標です。</p>
+        </div>
+    </div>
+
+    <!-- Contact Info Section -->
+    <div class="contact-info">
+        <!-- English -->
+        <div id="contact-info-en" class="lang-section active">
+            <h2>Contact Information</h2>
+            <p>Phone: [Your Phone Number]</p>
+            <p>Email: [Your Email Address]</p>
+            <p>Address: [Your Office Address]</p>
+        </div>
+        <!-- Chinese -->
+        <div id="contact-info-zh" class="lang-section">
+            <h2>联系信息</h2>
+            <p>电话: [您的电话号码]</p>
+            <p>电子邮件: [您的电子邮件地址]</p>
+            <p>地址: [您的办公室地址]</p>
+        </div>
+        <!-- Japanese -->
+        <div id="contact-info-ja" class="lang-section">
+            <h2>連絡先情報</h2>
+            <p>電話: [あなたの電話番号]</p>
+            <p>メール: [あなたのメールアドレス]</p>
+            <p>住所: [あなたの事務所住所]</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p id="footer-text">© 2025 Realtor Name. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript for Language Switching -->
+    <script>
+        function switchLang(lang) {
+            // Hide all intro sections
+            document.querySelectorAll('[id^="intro-"]').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(`intro-${lang}`).classList.add('active');
+
+            // Hide all about sections
+            document.querySelectorAll('[id^="about-"]').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(`about-${lang}`).classList.add('active');
+
+            // Hide all contact info sections
+            document.querySelectorAll('[id^="contact-info-"]').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(`contact-info-${lang}`).classList.add('active');
+
+            // Update header and footer text
+            const translations = {
+                en: {
+                    header: "Realtor Name",
+                    footer: "© 2025 Realtor Name. All rights reserved."
+                },
+                zh: {
+                    header: "房地产经纪人姓名",
+                    footer: "© 2025 房地产经纪人姓名。版权所有。"
+                },
+                ja: {
+                    header: "不動産業者名",
+                    footer: "© 2025 不動産業者名。全著作権所有。"
+                }
+            };
+
+            const t = translations[lang];
+            document.getElementById('header-title').textContent = t.header;
+            document.getElementById('footer-text').textContent = t.footer;
+        }
+
+        // Default to English on load
+        switchLang('en');
+    </script>
+</body>
+</html>
